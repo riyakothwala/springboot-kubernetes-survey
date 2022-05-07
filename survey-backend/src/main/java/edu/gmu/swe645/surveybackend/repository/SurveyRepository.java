@@ -6,6 +6,6 @@ import org.springframework.stereotype.Repository;
 import edu.gmu.swe645.surveybackend.model.Student;
 
 @Repository
-public interface SurveyRepository extends JpaRepository<Student, String> {
+public interface SurveyRepository extends JpaRepository<Student, Long> {
 
 }

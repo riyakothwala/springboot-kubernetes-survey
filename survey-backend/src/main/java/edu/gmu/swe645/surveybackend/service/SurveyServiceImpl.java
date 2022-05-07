@@ -1,6 +1,7 @@
 package edu.gmu.swe645.surveybackend.service;
 
 import java.util.List;
+import java.util.Optional;
 
 import org.springframework.stereotype.Service;
 
@@ -17,10 +18,10 @@ public class SurveyServiceImpl implements SurveyService {
 		this.surveyRepository = surveyRepository;
 	}
 
-//	@Override
-//	public Student getStudent(String id) {
-//		return surveyRepository.getById(id);
-//	}
+	@Override
+	public Optional<Student> getStudent(long id) {
+		return surveyRepository.findById(id);
+	}
 
 	@Override
 	public List<Student> getAllStudent() {
